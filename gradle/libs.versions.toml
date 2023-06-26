@@ -1,0 +1,32 @@
+[versions]
+# The latest versions are available at https://lambdaurora.dev/tools/import_quilt.html
+minecraft = "1.20.1"
+quilt_loader = "0.19.1"
+
+quilted_fabric_api = "7.0.2+0.83.0-1.20.1"
+
+sodium_version = "mc1.20-0.4.10"
+mod_menu_version = "7.0.1"
+joml_version = "1.10.5"
+midnightlib_version = "1.4.1-quilt"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loader" }
+
+quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
+quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
+
+sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
+joml = { module = "org.joml:joml", version.ref = "joml_version" }
+mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_version" }
+midnightlib = { module = "maven.modrinth:midnightlib", version.ref = "midnightlib_version"}
+
+# If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
+[bundles]
+quilted_fabric_api = ["quilted_fabric_api", "quilted_fabric_api_deprecated"]
+dev_mods = [ "joml", "sodium" ]
+dependencies = [ "quilt_loader", "midnightlib", "quilted_fabric_api", "mod_menu" ]
+
+[plugins]
+quilt_loom = { id = "org.quiltmc.loom", version = "1.2.+" }
