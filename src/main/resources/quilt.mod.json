@@ -42,5 +42,6 @@
 			}
 		]
 	},
-	"mixin": "grimace_milkshakes.mixins.json"
+	"mixin": "grimace_milkshakes.mixins.json",
+	"access_widener": "grimace_milkshakes.accesswidener"
 }

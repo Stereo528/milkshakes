@@ -93,6 +93,11 @@ publishing {
 		}
 	}
 }
+
+loom {
+	accessWidenerPath = file("src/main/resources/grimace_milkshakes.accesswidener")
+}
+
 String getVersion() {
 	def build_id = System.getenv("GITHUB_RUN_NUMBER")
 
