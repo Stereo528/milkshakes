@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class MixerBlock extends BaseEntityBlock implements EntityBlock {
-	protected MixerBlock(Properties properties) {
+	public MixerBlock(Properties properties) {
 		super(properties);
 	}
 
