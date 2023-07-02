@@ -1,14 +1,14 @@
 package com.stereo528.grimace_milkshakes.Blocks;
 
 import com.stereo528.grimace_milkshakes.Blocks.Entities.MixerBlockEntity;
+import com.stereo528.grimace_milkshakes.Screens.MixerScreenHandler;
 import com.stereo528.grimace_milkshakes.Util.Registar;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.MenuProvider;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -95,5 +95,12 @@ public class MixerBlock extends BaseEntityBlock implements EntityBlock {
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
 		return createTickerHelper(type, Registar.MIXER_BLOCK_ENTITY, MixerBlockEntity::tick);
+	}
+
+	@Override
+	public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+		return new SimpleMenuProvider(
+			(syncId, playerInventory, player) -> new MixerScreenHandler(syncId, playerInventory), Component.translatable("container.grimace_milkshakes.mixer")
+		);
 	}
 }

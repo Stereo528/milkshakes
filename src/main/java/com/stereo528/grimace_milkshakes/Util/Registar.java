@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
@@ -44,7 +45,7 @@ public class Registar {
 	public static Block MIXER_BLOCK = registerBlock("mixer_block", new MixerBlock(QuiltBlockSettings.of().strength(4.0f).noOcclusion()));
 	public static BlockEntityType<MixerBlockEntity> MIXER_BLOCK_ENTITY;
 
-	public static MenuType<MixerScreenHandler> MIXER_SCREEN_HANDLER;
+	public static MenuType<MixerScreenHandler> MIXER_SCREEN_HANDLER = new MenuType<>(MixerScreenHandler::new, FeatureFlagSet.of());
 
 	public static void init() {
 	}
