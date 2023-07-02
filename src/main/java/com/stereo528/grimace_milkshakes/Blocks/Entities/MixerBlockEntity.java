@@ -1,10 +1,12 @@
 package com.stereo528.grimace_milkshakes.Blocks.Entities;
 
 import com.stereo528.grimace_milkshakes.Recipe.MixerRecipe;
+import com.stereo528.grimace_milkshakes.Screens.MixerScreenHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -18,6 +20,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
+import org.quiltmc.qsl.networking.api.PacketByteBufs;
 
 import java.util.Optional;
 
@@ -75,7 +78,7 @@ public class MixerBlockEntity extends BlockEntity implements MenuProvider, Imple
 	@Nullable
 	@Override
 	public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
-		return null;
+		return new MixerScreenHandler(i, inventory, this, this.containerData);
 	}
 
 	@Override
