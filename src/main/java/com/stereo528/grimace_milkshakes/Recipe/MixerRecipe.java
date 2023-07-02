@@ -11,6 +11,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import org.quiltmc.qsl.recipe.api.serializer.QuiltRecipeSerializer;
 
 public class MixerRecipe implements Recipe<SimpleContainer> {
 	private final ResourceLocation id;
@@ -69,7 +70,7 @@ public class MixerRecipe implements Recipe<SimpleContainer> {
 		public static final String ID = "milkshake_mixing";
 	}
 
-	public static class Serializer implements RecipeSerializer<MixerRecipe> {
+	public static class Serializer implements QuiltRecipeSerializer<MixerRecipe> {
 		public static final Serializer INSTANCE = new Serializer();
 		public static final String ID = "milkshake_mixing";
 
@@ -106,6 +107,11 @@ public class MixerRecipe implements Recipe<SimpleContainer> {
 			}
 			friendlyByteBuf.writeItem(recipe.output);
 
+		}
+
+		@Override
+		public JsonObject toJson(MixerRecipe recipe) {
+			return null;
 		}
 	}
 }
