@@ -28,6 +28,8 @@ public class MixerScreenHandler extends AbstractContainerMenu {
 
 		addPlayerInventory(inventory);
 		addPlayerHotbar(inventory);
+
+		addDataSlots(containerData);
 	}
 
 
