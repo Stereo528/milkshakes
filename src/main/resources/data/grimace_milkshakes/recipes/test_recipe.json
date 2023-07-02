@@ -1,0 +1,10 @@
+{
+  "type": "grimace_milkshakes:milkshake_mixing",
+  "ingredients": [
+    { "item":  "minecraft:milk" }
+  ],
+  "output": {
+    "item": "grimace_milkshakes:grimace_shake"
+  }
+}
+
