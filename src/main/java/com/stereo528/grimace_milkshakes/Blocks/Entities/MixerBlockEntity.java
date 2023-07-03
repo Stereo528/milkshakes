@@ -101,11 +101,11 @@ public class MixerBlockEntity extends BlockEntity implements MenuProvider, Imple
 		if(level.isClientSide()) {
 			return;
 		}
-		if(hasRecipe(entity, level)) {
+		if(hasRecipe(entity)) {
 			entity.progress++;
 			setChanged(level, blockPos, state);
 			if (entity.progress >= entity.maxProgress) {
-				craftItem(entity, level);
+				craftItem(entity);
 			}
 			else {
 				entity.resetProgress();
@@ -114,22 +114,22 @@ public class MixerBlockEntity extends BlockEntity implements MenuProvider, Imple
 		}
 	}
 
-	private static void craftItem(MixerBlockEntity entity, Level level) {
+	private static void craftItem(MixerBlockEntity entity) {
 		SimpleContainer container = new SimpleContainer(entity.getContainerSize());
 		for(int i=0; i < entity.getContainerSize(); i++) {
 			container.setItem(i, entity.getItem(i));
 		}
 		Optional<MixerRecipe> recipe = entity.getLevel().getRecipeManager().getRecipeFor(MixerRecipe.Type.INSTANCE, container, entity.getLevel());
 
-		if (hasRecipe(entity, level)) {
+		if (hasRecipe(entity)) {
 			entity.removeItem(1, 1);
-			entity.setItem(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem(), entity.getItem(2).getCount() + 1));
+			entity.setItem(2, new ItemStack(recipe.get().getResultItem(null).getItem(), entity.getItem(2).getCount() + 1));
 			entity.resetProgress();
 		}
 
 	}
 
-	private static boolean hasRecipe(MixerBlockEntity entity, Level level) {
+	private static boolean hasRecipe(MixerBlockEntity entity) {
 		SimpleContainer inventory = new SimpleContainer(entity.getContainerSize());
 		for (int i = 0; i < entity.getContainerSize(); i++) {
 			inventory.setItem(i, entity.getItem(i));
@@ -137,7 +137,7 @@ public class MixerBlockEntity extends BlockEntity implements MenuProvider, Imple
 		Optional<MixerRecipe> match = entity.getLevel().getRecipeManager().getRecipeFor(MixerRecipe.Type.INSTANCE, inventory, entity.getLevel());
 
 		return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-			&& canInsertItemIntoOutputSlot(inventory, match.get().getResultItem(level.registryAccess()).getItem());
+			&& canInsertItemIntoOutputSlot(inventory, match.get().getResultItem(null).getItem());
 	}
 
 	private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, Item output) {

@@ -36,7 +36,7 @@ public class MixerRecipe implements Recipe<SimpleContainer> {
 
 	@Override
 	public ItemStack assemble(SimpleContainer container, RegistryAccess registryAccess) {
-		return output;
+		return getResultItem(registryAccess);
 	}
 
 	@Override
