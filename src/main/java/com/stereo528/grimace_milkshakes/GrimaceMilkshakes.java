@@ -56,6 +56,6 @@ public class GrimaceMilkshakes implements ModInitializer {
 		Registry.register(BuiltInRegistries.RECIPE_TYPE, new ResourceLocation(MODID, MixerRecipe.Type.ID), MixerRecipe.Type.INSTANCE);
 
 			// screen
-		Registry.register(BuiltInRegistries.MENU, new ResourceLocation(MODID, "mixer_block"), MIXER_SCREEN_HANDLER);
+		MenuScreens.register(MIXER_SCREEN_HANDLER, MixerScreen::new);
 	}
 }
