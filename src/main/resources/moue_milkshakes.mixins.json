@@ -1,7 +1,7 @@
 {
 	"required": true,
 	"minVersion": "0.8",
-	"package": "com.stereo528.grimace_milkshakes.Mixin",
+	"package": "com.stereo528.moue_milkshakes.Mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [],
 	"client": [

@@ -1,6 +1,6 @@
-package com.stereo528.grimace_milkshakes.Effects;
+package com.stereo528.moue_milkshakes.Effects;
 
-import com.stereo528.grimace_milkshakes.Util.Registar;
+import com.stereo528.moue_milkshakes.Util.Registar;
 import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffect;
@@ -9,8 +9,8 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import org.quiltmc.loader.api.minecraft.ClientOnly;
 
-public class GrimaceEffect extends MobEffect {
-	public GrimaceEffect(MobEffectCategory mobEffectCategory, int color) {
+public class MoueEffect extends MobEffect {
+	public MoueEffect(MobEffectCategory mobEffectCategory, int color) {
 		super(mobEffectCategory, color);
 		FogRenderer.MOB_EFFECT_FOG.add(new GrimaceFogFunction());
 	}
@@ -20,7 +20,7 @@ public class GrimaceEffect extends MobEffect {
 	private static class GrimaceFogFunction implements FogRenderer.MobEffectFogFunction {
 		@Override
 		public MobEffect getMobEffect() {
-			return Registar.GRIMACE;
+			return Registar.MOUE;
 		}
 
 		@Override

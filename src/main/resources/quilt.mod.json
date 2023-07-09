@@ -2,7 +2,7 @@
 	"schema_version": 1,
 	"quilt_loader": {
 		"group": "com.stereo528",
-		"id": "grimace_milkshakes",
+		"id": "moue_milkshakes",
 		"version": "${version}",
 		"metadata": {
 			"name": "Milkshakes",
@@ -12,16 +12,16 @@
 			},
 			"contact": {
 				"homepage": "https://stereo528.com",
-				"issues": "https://github.com/Stereo528/quilt-template-mod/issues",
-				"sources": "https://github.com/Stereo528/quilt-template-mod"
+				"issues": "https://github.com/Stereo528/milkshakes/issues",
+				"sources": "https://github.com/Stereo528/milkshakes"
 			},
-			"icon": "assets/example/icon.png"
+			"icon": "assets/moue_milkshakes/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.stereo528.grimace_milkshakes.GrimaceMilkshakes",
-			"client_init": "com.stereo528.grimace_milkshakes.GrimaceMilkshakesClient",
-			"modmenu": "com.stereo528.grimace_milkshakes.Config.ModMenuIntegration"
+			"init": "com.stereo528.moue_milkshakes.GrimaceMilkshakes",
+			"client_init": "com.stereo528.moue_milkshakes.GrimaceMilkshakesClient",
+			"modmenu": "com.stereo528.moue_milkshakes.Config.ModMenuIntegration"
 		},
 		"depends": [
 			{
@@ -42,6 +42,6 @@
 			}
 		]
 	},
-	"mixin": "grimace_milkshakes.mixins.json",
-	"access_widener": "grimace_milkshakes.accesswidener"
+	"mixin": "moue_milkshakes.mixins.json",
+	"access_widener": "moue_milkshakes.accesswidener"
 }

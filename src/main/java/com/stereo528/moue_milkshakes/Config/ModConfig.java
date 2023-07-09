@@ -1,4 +1,4 @@
-package com.stereo528.grimace_milkshakes.Config;
+package com.stereo528.moue_milkshakes.Config;
 
 import eu.midnightdust.lib.config.MidnightConfig;
 

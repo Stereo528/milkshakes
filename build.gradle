@@ -96,7 +96,7 @@ publishing {
 }
 
 loom {
-	accessWidenerPath = file("src/main/resources/grimace_milkshakes.accesswidener")
+	accessWidenerPath = file("src/main/resources/moue_milkshakes.accesswidener")
 }
 
 String getVersion() {

@@ -1,4 +1,4 @@
-package com.stereo528.grimace_milkshakes.Mixin;
+package com.stereo528.moue_milkshakes.Mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Camera;
@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static com.stereo528.grimace_milkshakes.Util.Registar.GRIMACE;
+import static com.stereo528.moue_milkshakes.Util.Registar.MOUE;
 
 @Mixin(FogRenderer.class)
 public class FogRendererMixin {
@@ -31,7 +31,7 @@ public class FogRendererMixin {
 	private static void grimaceColor(Camera camera, float f, ClientLevel clientLevel, int i, float g, CallbackInfo ci) {
 		Entity entity = camera.getEntity();
 		if(entity instanceof Player player) {
-			if(player.hasEffect(GRIMACE)) {
+			if(player.hasEffect(MOUE)) {
 				fogRed = 84f/255f;
 				fogGreen = 62f/255f;
 				fogBlue = 98f/255f;

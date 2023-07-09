@@ -1,7 +1,7 @@
-package com.stereo528.grimace_milkshakes.Config;
+package com.stereo528.moue_milkshakes.Config;
 
 
-import com.stereo528.grimace_milkshakes.GrimaceMilkshakes;
+import com.stereo528.moue_milkshakes.MoueMilkshakes;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import eu.midnightdust.lib.config.MidnightConfig;
@@ -9,6 +9,6 @@ import eu.midnightdust.lib.config.MidnightConfig;
 public class ModMenuIntegration implements ModMenuApi {
 	@Override
 	public ConfigScreenFactory<?> getModConfigScreenFactory() {
-		return parent -> MidnightConfig.getScreen(parent, GrimaceMilkshakes.MODID);
+		return parent -> MidnightConfig.getScreen(parent, MoueMilkshakes.MODID);
 	}
 }
