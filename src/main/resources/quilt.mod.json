@@ -19,8 +19,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.stereo528.moue_milkshakes.GrimaceMilkshakes",
-			"client_init": "com.stereo528.moue_milkshakes.GrimaceMilkshakesClient",
+			"init": "com.stereo528.moue_milkshakes.MoueMilkshakes",
+			"client_init": "com.stereo528.moue_milkshakes.MoueMilkshakesClient",
 			"modmenu": "com.stereo528.moue_milkshakes.Config.ModMenuIntegration"
 		},
 		"depends": [

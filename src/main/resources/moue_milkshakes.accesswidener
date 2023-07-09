@@ -3,3 +3,5 @@ accessWidener v1 named
 accessible class net/minecraft/client/renderer/FogRenderer$MobEffectFogFunction
 accessible class net/minecraft/client/renderer/FogRenderer$FogData
 accessible field net/minecraft/client/renderer/FogRenderer MOB_EFFECT_FOG Ljava/util/List;
+accessible class net/minecraft/world/item/alchemy/PotionBrewing$Mix
+accessible field net/minecraft/world/item/alchemy/PotionBrewing CONTAINER_MIXES Ljava/util/List;

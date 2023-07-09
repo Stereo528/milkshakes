@@ -1,13 +1,16 @@
 {
-	"required": true,
-	"minVersion": "0.8",
-	"package": "com.stereo528.moue_milkshakes.Mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [],
-	"client": [
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.stereo528.moue_milkshakes.Mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BrewingStandMenuMixin",
+    "PotionBrewingMixin"
+  ],
+  "client": [
     "FogRendererMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

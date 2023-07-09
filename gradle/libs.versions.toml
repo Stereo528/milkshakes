@@ -9,7 +9,8 @@ sodium_version = "mc1.20-0.4.10"
 mod_menu_version = "7.0.1"
 joml_version = "1.10.5"
 midnightlib_version = "1.4.1-quilt"
-rei_version = "12.0.625"
+emi_version = "1.0.6+1.20.1"
+milk_lib_version = "1.2.60"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
@@ -22,13 +23,14 @@ sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
 joml = { module = "org.joml:joml", version.ref = "joml_version" }
 mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_version" }
 midnightlib = { module = "maven.modrinth:midnightlib", version.ref = "midnightlib_version"}
-rei = { module = "me.shedaniel:RoughlyEnoughItems-fabric", version.ref = "rei_version"}
+emi = { module = "dev.emi:emi-fabric", version.ref = "emi_version"}
+milk_lib = {module = "io.github.tropheusj:milk-lib", version.ref = "milk_lib_version"}
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]
 quilted_fabric_api = ["quilted_fabric_api", "quilted_fabric_api_deprecated"]
-dev_mods = [ "joml", "sodium", "rei" ]
-dependencies = [ "quilt_loader", "midnightlib", "quilted_fabric_api", "mod_menu" ]
+dev_mods = [ "joml", "sodium", "emi" ]
+dependencies = [ "quilt_loader", "midnightlib", "quilted_fabric_api", "mod_menu", "milk_lib" ]
 
 [plugins]
 quilt_loom = { id = "org.quiltmc.loom", version = "1.2.+" }

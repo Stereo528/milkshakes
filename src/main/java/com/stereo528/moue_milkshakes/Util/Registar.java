@@ -17,8 +17,10 @@ import static com.stereo528.moue_milkshakes.MoueMilkshakes.*;
 
 public class Registar {
 
-	public static final MobEffect MOUE = registerEffect("grimace", new MoueEffect(MobEffectCategory.HARMFUL, 0x543e62));
-	public static final Item MOUE_SHAKE = registerItem("grimace_shake", new Item(new QuiltItemSettings().stacksTo(1).food(
+	public static final MobEffect MOUE = registerEffect("moue", new MoueEffect(MobEffectCategory.HARMFUL, 0x543e62));
+
+	// Foods
+	public static final Item MOUE_SHAKE = registerItem("moue_shake", new Item(new QuiltItemSettings().stacksTo(1).food(
 		new FoodProperties.Builder().nutrition(2).saturationMod(1).alwaysEat().effect(new MobEffectInstance(MOUE, 100, 0), 1.0F).build()
 	)));
 
@@ -31,6 +33,13 @@ public class Registar {
 	public static final Item STRAWBERRY_SHAKE = registerItem("strawberry_shake", new Item(new QuiltItemSettings().stacksTo(1).food(
 		new FoodProperties.Builder().nutrition(3).saturationMod(2).build()
 	)));
+
+	// Items
+
+	public static final Item SHAKE_MIX = registerItem("shake_mix", new Item(new QuiltItemSettings()));
+	public static final Item SHAKE_MIX_SHAKE_CUP = registerItem("partially_filled_shake_cup", new Item(new QuiltItemSettings().stacksTo(1)));
+
+
 
 
 
