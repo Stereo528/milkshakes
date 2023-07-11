@@ -1,33 +1,25 @@
-# Quilt Template Mod
+# Moue Milkshakes (For Quilt)
 
-Stereo528's unofficial Quilt template mod. You can use it as a template for your own mods! However, this is the basis for all of my mods going forward!
+---
 
-## Usage
+Moue Milkshakes adds 4 flavors of shakes, as well as a custom mob effect!
 
-In order to use this mod as a template:
+### Moue (/mu/)
+#### a little grimace : pout
 
-1. Create a new repository from this template with `Use this template`
-2. Clone the recently-created repo on your PC
-3. Make the necessary changes in order to make it yours:
-    - Update `gradle.properties` in order to use your Maven group and mod ID
-        - If you don't know which Maven group to use, and you are planning to host the mod's source code on GitHub, use `io.github.<Your_Username_Here>`
-    - Update `quilt.mod.json` in order to reflect your mod's metadata
-        - If you are planning to include (jar-in-jar) a mod, don't forget to declare its dependency on it!
-        - The icon provided here is a placeholder one. If you aren't able to replace it yet, you can delete it and remove the "icon" property
-    - Create a LICENSE file for this mod! If you don't know which license to use, check out [here](https://choosealicense.com/).
-        - In `quilt.mod.json`, don't forget to put the license's [SPDX identifier](https://spdx.org/licenses/) under the `"license"` property in `"metadata"`.
-        - The GPLv3 and AGPLv3 are not valid mod licenses, so you can use almost any license except for those.
-    - Update the Java sub-directory structure so it reflects your Maven group
-    - If the dependencies on `gradle/libs.versions.toml` isn't up-to-date, feel free to update them! The [linked utility](https://lambdaurora.dev/tools/import_quilt.html) should help you in this easy and quick process.
-4. The mod is now ready to be worked on!
+## What the hell?!?!?!
 
-##  Changes
-- LazyDFU & Sodium are dev environment only mods
-- MidnightLib is a dependency mod
-- MidnightLib config system is set up already!
+---
+Well you see on one fine day I thought of making a cursed mod, and Grimace Shakes are/were
+the big thing, so I got started. After lots of deliberation I can proudly present Moue Milkshakes!
 
-## License
+Using state-of-the-art methods, you can now brew, *yes* brew, your milkshakes! Using shake mix and some milk bottles (provided by Milk Lib)
+you can create Vanilla, Chocolate, or Strawberry shakes.
 
-This template is licensed under the [BSD-3-Clause "New" or "Revised" License](./LICENSE.md).
+### But wait, what about that fourth shake???
+Well just you be patient...
 
-Mods created with this template are not automatically licensed under the CC0, and are not required to give any kind of credit back to QuiltMC or Stereo528 for this template.
+The Moue Shake, the big deal, the meme. Drinking this might have some adverse effects on you.
+It does use Glow Berries after all, who knows what those things have in them...
+
+We claim no responsibility to damage to property or self when drinking this shake.

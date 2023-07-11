@@ -5,8 +5,8 @@
 		"id": "moue_milkshakes",
 		"version": "${version}",
 		"metadata": {
-			"name": "Milkshakes",
-			"description": "hell.",
+			"name": "Moue Milkshakes",
+			"description": "### Moue (/mu/)\n a little grimace : pout\n---\nGrimace Shakes are/were the big thing. So I thought \"why the hell not.\", And now I can proudly present Moue Milkshakes!\nUsing state-of-the-art methods, you can now brew, *yes* brew, your milkshakes!\nUsing shake mix and some milk bottles (provided by Milk Lib) you can create Vanilla, Chocolate, or Strawberry shakes.",
 			"contributors": {
 				"Stereo528": "Owner"
 			},
