@@ -1,6 +1,5 @@
 package com.stereo528.moue_milkshakes.Util;
 
-import com.stereo528.moue_milkshakes.Config.ModConfig;
 import com.stereo528.moue_milkshakes.Effects.MoueEffect;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;

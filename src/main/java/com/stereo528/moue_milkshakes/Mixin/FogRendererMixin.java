@@ -1,7 +1,6 @@
 package com.stereo528.moue_milkshakes.Mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.stereo528.moue_milkshakes.Config.ModConfig;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.FogRenderer;
