@@ -33,10 +33,6 @@
 			{
 				"id": "minecraft",
 				"versions": ">=1.20"
-			},
-			{
-				"id": "midnightlib",
-				"versions": ">=1.4.0-"
 			}
 		]
 	},
