@@ -1,4 +1,10 @@
 {
-  "itemGroup.grimace_milkshakes.milkshakes_tab": "Grimace Milkshakes",
-  "container.grimace_milkshakes.mixer": "Mixer"
+  "itemGroup.moue_milkshakes.milkshakes_tab": "Grimace Milkshakes",
+  "item.moue_milkshakes.strawberry_shake": "Strawberry Shake",
+  "item.moue_milkshakes.chocolate_shake": "Chocolate Shake",
+  "item.moue_milkshakes.vanilla_shake": "Vanilla Shake",
+  "item.moue_milkshakes.moue_shake": "Moue Shake",
+  "item.moue_milkshakes.partially_filled_shake_cup": "Partially Full Shake Cup",
+  "item.moue_milkshakes.shake_mix": "Shake Mix"
+
 }

@@ -1,6 +1,7 @@
 package com.stereo528.moue_milkshakes.Mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.stereo528.moue_milkshakes.Config.ModConfig;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.FogRenderer;
@@ -30,11 +31,11 @@ public class FogRendererMixin {
 	@Inject(method = "setupColor", at = @At("TAIL"))
 	private static void grimaceColor(Camera camera, float f, ClientLevel clientLevel, int i, float g, CallbackInfo ci) {
 		Entity entity = camera.getEntity();
-		if(entity instanceof Player player) {
-			if(player.hasEffect(MOUE)) {
-				fogRed = 84f/255f;
-				fogGreen = 62f/255f;
-				fogBlue = 98f/255f;
+		if (entity instanceof Player player) {
+			if (player.hasEffect(MOUE)) {
+				fogRed = 84f / 255f;
+				fogGreen = 62f / 255f;
+				fogBlue = 98f / 255f;
 
 				RenderSystem.clearColor(fogRed, fogGreen, fogBlue, 0.0F);
 			}

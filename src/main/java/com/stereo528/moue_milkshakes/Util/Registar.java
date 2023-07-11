@@ -1,5 +1,6 @@
 package com.stereo528.moue_milkshakes.Util;
 
+import com.stereo528.moue_milkshakes.Config.ModConfig;
 import com.stereo528.moue_milkshakes.Effects.MoueEffect;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
@@ -23,6 +24,7 @@ public class Registar {
 	public static final Item MOUE_SHAKE = registerItem("moue_shake", new Item(new QuiltItemSettings().stacksTo(1).food(
 		new FoodProperties.Builder().nutrition(2).saturationMod(1).alwaysEat().effect(new MobEffectInstance(MOUE, 100, 0), 1.0F).build()
 	)));
+
 
 	public static final Item VANILLA_SHAKE = registerItem("vanilla_shake", new Item(new QuiltItemSettings().stacksTo(1).food(
 		new FoodProperties.Builder().nutrition(3).saturationMod(2).build()

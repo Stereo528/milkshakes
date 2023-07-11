@@ -6,7 +6,7 @@
 		"version": "${version}",
 		"metadata": {
 			"name": "Moue Milkshakes",
-			"description": "### Moue (/mu/)\n a little grimace : pout\n---\nGrimace Shakes are/were the big thing. So I thought \"why the hell not.\", And now I can proudly present Moue Milkshakes!\nUsing state-of-the-art methods, you can now brew, *yes* brew, your milkshakes!\nUsing shake mix and some milk bottles (provided by Milk Lib) you can create Vanilla, Chocolate, or Strawberry shakes.",
+			"description": "Moue (/mu/)\n a little grimace : pout\n---\nGrimace Shakes are/were the big thing. So I thought \"why the hell not.\", And now I can proudly present Moue Milkshakes!\nUsing state-of-the-art methods, you can now brew, *yes* brew, your milkshakes!\nUsing shake mix and some milk bottles (provided by Milk Lib) you can create Vanilla, Chocolate, or Strawberry shakes.",
 			"contributors": {
 				"Stereo528": "Owner"
 			},
@@ -19,9 +19,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.stereo528.moue_milkshakes.MoueMilkshakes",
-			"client_init": "com.stereo528.moue_milkshakes.MoueMilkshakesClient",
-			"modmenu": "com.stereo528.moue_milkshakes.Config.ModMenuIntegration"
+			"init": "com.stereo528.moue_milkshakes.MoueMilkshakes"
 		},
 		"depends": [
 			{

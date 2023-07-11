@@ -28,7 +28,7 @@ public class MoueMilkshakes implements ModInitializer {
 	public static final ResourceKey<CreativeModeTab> ITEM_GROUP = ResourceKey.create(Registries.CREATIVE_MODE_TAB,  new ResourceLocation(MODID, "milkshakes.tab"));
 	public static final CreativeModeTab MILKSHAKES = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(MOUE_SHAKE))
-		.title(Component.translatable("itemGroup.grimace_milkshakes.milkshakes_tab"))
+		.title(Component.translatable("itemGroup.moue_milkshakes.milkshakes_tab"))
 		.build();
 
 
