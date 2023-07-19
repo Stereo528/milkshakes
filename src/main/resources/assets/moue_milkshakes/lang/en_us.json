@@ -6,6 +6,7 @@
   "item.moue_milkshakes.moue_shake": "Moue Shake",
   "item.moue_milkshakes.partially_filled_shake_cup": "Partially Full Shake Cup",
   "item.moue_milkshakes.shake_mix": "Shake Mix",
-  "effect.moue_milkshakes.moue": "Moue"
+  "effect.moue_milkshakes.moue": "Moue",
+  "block.moue_milkshakes.shake_mix_block": "Shake Mix Block"
 
 }

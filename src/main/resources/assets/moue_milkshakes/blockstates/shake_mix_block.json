@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "moue_milkshakes:block/shake_mix_block"
+      },
+      {
+        "model": "moue_milkshakes:block/shake_mix_block",
+        "y": 90
+      },
+      {
+        "model": "moue_milkshakes:block/shake_mix_block",
+        "y": 180
+      },
+      {
+        "model": "moue_milkshakes:block/shake_mix_block",
+        "y": 270
+      }
+    ]
+  }
+}

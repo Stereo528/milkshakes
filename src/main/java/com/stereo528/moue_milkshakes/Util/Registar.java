@@ -9,12 +9,16 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import org.quiltmc.loader.api.minecraft.ClientOnly;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FallingBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 
 import static com.stereo528.moue_milkshakes.MoueMilkshakes.*;
+import static net.minecraft.world.level.block.Blocks.SAND;
 
 public class Registar {
 
@@ -38,9 +42,12 @@ public class Registar {
 	)));
 
 	// Items
+	public static final Item SHAKE_MIX_SHAKE_CUP = registerItem("partially_filled_shake_cup", new Item(new QuiltItemSettings().stacksTo(1)));
 
 	public static final Item SHAKE_MIX = registerItem("shake_mix", new Item(new QuiltItemSettings()));
-	public static final Item SHAKE_MIX_SHAKE_CUP = registerItem("partially_filled_shake_cup", new Item(new QuiltItemSettings().stacksTo(1)));
+
+	// Blocks
+	public static final Block SHAKE_MIX_BLOCK = registerBlock("shake_mix_block", new FallingBlock(BlockBehaviour.Properties.copy(SAND)));
 
 
 
@@ -54,6 +61,10 @@ public class Registar {
 			content.accept(item);
 		});
 		return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MODID, name), item);
+	}
+	public static Block registerBlock(String name, Block block) {
+		registerItem(name, new BlockItem(block, new QuiltItemSettings()));
+		return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(MODID, name), block);
 	}
 }
 
