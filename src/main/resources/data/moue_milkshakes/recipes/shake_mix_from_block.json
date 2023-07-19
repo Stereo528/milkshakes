@@ -1,22 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "category": "building",
   "ingredients": [
     {
-      "item": "minecraft:chorus_fruit"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
+      "item": "moue_milkshakes:shake_mix_block"
     }
   ],
   "result": {
     "item": "moue_milkshakes:shake_mix",
-    "count": 4
+    "count": 9
   }
 }
