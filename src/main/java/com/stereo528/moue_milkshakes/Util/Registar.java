@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 
@@ -17,11 +18,12 @@ import static com.stereo528.moue_milkshakes.MoueMilkshakes.*;
 
 public class Registar {
 
-	public static final MobEffect MOUE = registerEffect("moue", new MoueEffect(MobEffectCategory.HARMFUL, 0x543e62));
+
+	public static MobEffect MOUE_EFFECT = new MoueEffect(MobEffectCategory.HARMFUL, 0x543e62);
 
 	// Foods
 	public static final Item MOUE_SHAKE = registerItem("moue_shake", new Item(new QuiltItemSettings().stacksTo(1).food(
-		new FoodProperties.Builder().nutrition(2).saturationMod(1).alwaysEat().effect(new MobEffectInstance(MOUE, 100, 0), 1.0F).build()
+		new FoodProperties.Builder().nutrition(2).saturationMod(1).alwaysEat().effect(new MobEffectInstance(MOUE_EFFECT, 100, 0), 1.0F).build()
 	)));
 
 
@@ -45,10 +47,6 @@ public class Registar {
 
 
 	public static void init() {
-	}
-
-	public static MobEffect registerEffect(String name, MobEffect mobEffect) {
-		return Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(MODID, name), mobEffect);
 	}
 
 	public static Item registerItem(String name, Item item) {

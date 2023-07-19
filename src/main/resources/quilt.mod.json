@@ -19,7 +19,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.stereo528.moue_milkshakes.MoueMilkshakes"
+			"init": "com.stereo528.moue_milkshakes.MoueMilkshakes",
+			"client_init": "com.stereo528.moue_milkshakes.MoueMilkshakesClient"
 		},
 		"depends": [
 			{

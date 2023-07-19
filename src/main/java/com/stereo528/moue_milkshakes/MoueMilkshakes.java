@@ -49,5 +49,6 @@ public class MoueMilkshakes implements ModInitializer {
 		//What can't be easily registered there is here:
 			//item group
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, MILKSHAKES);
+
 	}
 }
