@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "sss",
+    "sss",
+    "sss"
+  ],
+  "key": {
+    "s": {
+      "item": "moue_milkshakes:shake_mix"
+    }
+  },
+  "result": {
+    "item": "moue_milkshakes:shake_mix_block"
+  }
+}
