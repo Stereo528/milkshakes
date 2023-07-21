@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "moue_milkshakes:strawberry"
+    },
+    {
+      "item": "moue_milkshakes:strawberry"
+    },
+    {
+      "item": "moue_milkshakes:strawberry"
+    },
+    {
+      "item": "moue_milkshakes:strawberry"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "moue_milkshakes:sugared_strawberry",
+    "count": 4
+  }
+}

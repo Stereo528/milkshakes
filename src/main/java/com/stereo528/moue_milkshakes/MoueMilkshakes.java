@@ -42,7 +42,7 @@ public class MoueMilkshakes implements ModInitializer {
 		//Shoutout to Sisby Folk for letting me use their code they used in Pollinator's Paradise
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(SUGAR), Registar.VANILLA_SHAKE));
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(COCOA_BEANS), Registar.CHOCOLATE_SHAKE));
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(SWEET_BERRIES), Registar.STRAWBERRY_SHAKE));
+		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(SUGAR_STRAWBERRY), Registar.STRAWBERRY_SHAKE));
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(GLOW_BERRIES), MOUE_SHAKE));
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Milk.MILK_BOTTLE, Ingredient.of(SHAKE_MIX), SHAKE_MIX_SHAKE_CUP));
 
