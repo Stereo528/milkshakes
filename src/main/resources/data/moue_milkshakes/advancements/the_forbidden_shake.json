@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "moue_milkshakes:moue_shake"
+    },
+    "title": "The Forbidden Shake",
+    "description": "You have created and consumed the Forbidden Shake, how could you...",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:nether/brew_potion",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {}
+    }
+  },
+  "rewards": {},
+  "sends_telemetry_event": false
+}
