@@ -25,6 +25,7 @@ dependencies {
 
 	modImplementation libs.quilted.fabric.api
 	modImplementation libs.bundles.dependencies
+	include libs.milk.lib
 	modLocalRuntime(libs.bundles.dev.mods) { exclude group: "net.fabricmc"; exclude group: "net.fabricmc.fabric-api"; exclude group: "net.fabricmc.loader" }
 }
 
