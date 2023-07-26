@@ -14,7 +14,13 @@
   "criteria": {
     "requirement": {
       "trigger": "minecraft:consume_item",
-      "conditions": {}
+      "conditions": {
+        "item": {
+          "items": [
+            "moue_milkshakes:moue_shake"
+          ]
+        }
+      }
     }
   },
   "rewards": {},
