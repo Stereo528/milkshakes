@@ -46,6 +46,7 @@ public class MoueMilkshakes implements ModInitializer {
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(GLOW_BERRIES), MOUE_SHAKE));
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Milk.MILK_BOTTLE, Ingredient.of(SHAKE_MIX), SHAKE_MIX_SHAKE_CUP));
 
+		Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(MODID, "moue"), MOUE_EFFECT);
 		//What can't be easily registered there is here:
 			//item group
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, MILKSHAKES);

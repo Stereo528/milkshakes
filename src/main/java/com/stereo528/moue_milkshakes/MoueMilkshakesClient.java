@@ -17,7 +17,7 @@ import static com.stereo528.moue_milkshakes.Util.Registar.MOUE_EFFECT;
 public class MoueMilkshakesClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient(ModContainer mod) {
-		Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(MODID, "moue"), MOUE_EFFECT);
+
 		FogRenderer.MOB_EFFECT_FOG.add(new GrimaceFogFunction());
 		BlockRenderLayerMap.put(RenderType.cutout(), Registar.STRAWBERRY_CROP);
 	}
