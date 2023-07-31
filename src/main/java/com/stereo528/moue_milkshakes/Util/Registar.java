@@ -50,6 +50,8 @@ public class Registar {
 
 	public static final Block SHAKE_MIX_BLOCK = registerBlock("shake_mix_block", new FallingBlock(BlockBehaviour.Properties.copy(SAND)));
 
+	public static final Block SPEED_BLOCK = registerBlock("sugar_block", new FallingBlock(BlockBehaviour.Properties.copy(SAND)));
+
 	public static final Item STRAWBERRY = registerItem("strawberry", new Item(new QuiltItemSettings().food(new
 		FoodProperties.Builder().nutrition(1).saturationMod(1).build()
 	)));
