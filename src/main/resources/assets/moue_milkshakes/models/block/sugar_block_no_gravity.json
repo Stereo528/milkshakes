@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "moue_milkshakes:block/sugar_block"
-  }
-}
