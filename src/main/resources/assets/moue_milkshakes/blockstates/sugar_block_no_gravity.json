@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "moue_milkshakes:block/sugar_block"
+      },
+      {
+        "model": "moue_milkshakes:block/sugar_block",
+        "y": 90
+      },
+      {
+        "model": "moue_milkshakes:block/sugar_block",
+        "y": 180
+      },
+      {
+        "model": "moue_milkshakes:block/sugar_block",
+        "y": 270
+      }
+    ]
+  }
+}

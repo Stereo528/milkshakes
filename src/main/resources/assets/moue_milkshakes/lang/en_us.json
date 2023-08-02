@@ -8,8 +8,15 @@
   "item.moue_milkshakes.shake_mix": "Shake Mix",
   "effect.moue_milkshakes.moue": "Moue",
   "block.moue_milkshakes.shake_mix_block": "Shake Mix Block",
+  "block.moue_milkshakes.shake_mix_block_no_gravity": "Shake Mix Block (No Gravity)",
+  "block.moue_milkshakes.sugar_block": "Sugar Block",
+  "block.moue_milkshakes.sugar_block_no_gravity": "Sugar Block (No Gravity)",
   "item.moue_milkshakes.strawberry": "Strawberry",
   "item.moue_milkshakes.strawberry_seeds": "Strawberry Seeds",
   "item.moue_milkshakes.sugared_strawberry": "Sugared Strawberry",
-  "block.moue_milkshakes.strawberry_crop": "Strawberry Crop"
+  "block.moue_milkshakes.strawberry_crop": "Strawberry Crop",
+
+
+  "architecture_extensions.grouped_block.moue_milkshakes.shake_mix_block": "Shake Mix",
+  "architecture_extensions.grouped_block.moue_milkshakes.sugar_block": "Sugar"
 }
