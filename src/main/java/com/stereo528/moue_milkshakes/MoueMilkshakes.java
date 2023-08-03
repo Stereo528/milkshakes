@@ -44,6 +44,9 @@ public class MoueMilkshakes implements ModInitializer {
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(COCOA_BEANS), Registar.CHOCOLATE_SHAKE));
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(SUGAR_STRAWBERRY), Registar.STRAWBERRY_SHAKE));
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(GLOW_BERRIES), MOUE_SHAKE));
+		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(CARROT), CARROT_SMOOTHIE));
+		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(GOLDEN_CARROT), GOLDEN_CARROT_SMOOTHIE));
+		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(NETHER_STAR), NETHER_STAR_SHAKE));
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Milk.MILK_BOTTLE, Ingredient.of(SHAKE_MIX), SHAKE_MIX_SHAKE_CUP));
 
 		Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(MODID, "moue"), MOUE_EFFECT);

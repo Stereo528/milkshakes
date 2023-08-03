@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -22,6 +23,7 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 
 import static com.stereo528.moue_milkshakes.MoueMilkshakes.*;
+import static net.minecraft.world.effect.MobEffects.NIGHT_VISION;
 import static net.minecraft.world.level.block.Blocks.SAND;
 
 public class Registar {
@@ -43,6 +45,24 @@ public class Registar {
 	public static final Item STRAWBERRY_SHAKE = registerItem("strawberry_shake", new Item(new QuiltItemSettings()
 		.stacksTo(1).food(new FoodProperties.Builder().nutrition(3).saturationMod(2).build()
 	)));
+
+	public static final Item CARROT_SMOOTHIE = registerItem("carrot_smoothie", new Item(new QuiltItemSettings()
+		.stacksTo(1).food(new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).alwaysEat()
+			.effect(new MobEffectInstance(NIGHT_VISION, 300, 0), 1.0F).build()
+		)));
+
+	public static final Item GOLDEN_CARROT_SMOOTHIE = registerItem("golden_carrot_smoothie", new Item(new QuiltItemSettings()
+		.stacksTo(1).food(new FoodProperties.Builder().nutrition(4).saturationMod(6).alwaysEat()
+			.effect(new MobEffectInstance(NIGHT_VISION, 600, 0), 1.0F).build()
+		)));
+
+	public static final Item NETHER_STAR_SHAKE = registerItem("nether_star_shake", new Item(new QuiltItemSettings()
+		.stacksTo(1).food(new FoodProperties.Builder().nutrition(4).saturationMod(1.5F)
+			.effect(new MobEffectInstance(MobEffects.REGENERATION, 300, 2), 1.0F)
+			.effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2100, 0), 1.0F)
+			.effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 2100, 0), 1.0F)
+			.effect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 2), 1.0F).alwaysEat().build()
+		)));
 
 	public static final Item SHAKE_MIX_SHAKE_CUP = registerItem("partially_filled_shake_cup", new Item(new QuiltItemSettings().stacksTo(1)));
 
