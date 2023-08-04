@@ -10,6 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -40,13 +41,13 @@ public class MoueMilkshakes implements ModInitializer {
 		Registar.init();
 		//I love using the same method as potion + gunpowder = splash to do anything that's not a potion item
 		//Shoutout to Sisby Folk for letting me use their code they used in Pollinator's Paradise
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(SUGAR), Registar.VANILLA_SHAKE));
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(COCOA_BEANS), Registar.CHOCOLATE_SHAKE));
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(SUGAR_STRAWBERRY), Registar.STRAWBERRY_SHAKE));
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(GLOW_BERRIES), MOUE_SHAKE));
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(CARROT), CARROT_SMOOTHIE));
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(GOLDEN_CARROT), GOLDEN_CARROT_SMOOTHIE));
-		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Registar.SHAKE_MIX_SHAKE_CUP, Ingredient.of(NETHER_STAR), NETHER_STAR_SHAKE));
+		addPotionRecipe(SUGAR, VANILLA_SHAKE);
+		addPotionRecipe(COCOA_BEANS, CHOCOLATE_SHAKE);
+		addPotionRecipe(SUGAR_STRAWBERRY, STRAWBERRY_SHAKE);
+		addPotionRecipe(GLOW_BERRIES, MOUE_SHAKE);
+		addPotionRecipe(CARROT, CARROT_SMOOTHIE);
+		addPotionRecipe(GOLDEN_CARROT, GOLDEN_CARROT_SMOOTHIE);
+		addPotionRecipe(NETHER_STAR, NETHER_STAR_SHAKE);
 		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(Milk.MILK_BOTTLE, Ingredient.of(SHAKE_MIX), SHAKE_MIX_SHAKE_CUP));
 
 		Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(MODID, "moue"), MOUE_EFFECT);
@@ -54,5 +55,9 @@ public class MoueMilkshakes implements ModInitializer {
 			//item group
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, MILKSHAKES);
 
+	}
+
+	private void addPotionRecipe(Item ingredient, Item result) {
+		PotionBrewing.CONTAINER_MIXES.add(new PotionBrewing.Mix<>(SHAKE_MIX_SHAKE_CUP, Ingredient.of(ingredient), result));
 	}
 }

@@ -46,15 +46,19 @@ public class Registar {
 		.stacksTo(1).food(new FoodProperties.Builder().nutrition(3).saturationMod(2).build()
 	)));
 
+	public static final Item STRAWBERRY_JUICE = registerItem("strawberry_juice", new Item(new QuiltItemSettings()
+		.stacksTo(1).food(new FoodProperties.Builder().nutrition(2).saturationMod(2).build()
+	)));
+
 	public static final Item CARROT_SMOOTHIE = registerItem("carrot_smoothie", new Item(new QuiltItemSettings()
 		.stacksTo(1).food(new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).alwaysEat()
 			.effect(new MobEffectInstance(NIGHT_VISION, 300, 0), 1.0F).build()
-		)));
+	)));
 
 	public static final Item GOLDEN_CARROT_SMOOTHIE = registerItem("golden_carrot_smoothie", new Item(new QuiltItemSettings()
 		.stacksTo(1).food(new FoodProperties.Builder().nutrition(4).saturationMod(6).alwaysEat()
 			.effect(new MobEffectInstance(NIGHT_VISION, 600, 0), 1.0F).build()
-		)));
+	)));
 
 	public static final Item NETHER_STAR_SHAKE = registerItem("nether_star_shake", new Item(new QuiltItemSettings()
 		.stacksTo(1).food(new FoodProperties.Builder().nutrition(4).saturationMod(1.5F)
