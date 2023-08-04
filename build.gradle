@@ -4,7 +4,7 @@ plugins {
 	id 'org.ajoberstar.grgit' version '5.2.0'
 }
 
-archivesBaseName = "${project.archives_base_name}+mc${libs.versions.minecraft.get()}"
+archivesBaseName = "${project.archives_base_name}-mc${libs.versions.minecraft.get()}"
 version = "${project.mod_version}+${getVersion()}"
 group = project.maven_group
 
