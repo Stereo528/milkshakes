@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "moue_milkshakes:item/strawberry_juice"
+  }
+}

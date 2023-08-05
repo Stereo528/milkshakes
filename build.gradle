@@ -5,7 +5,7 @@ plugins {
 }
 
 archivesBaseName = "${project.archives_base_name}-mc${libs.versions.minecraft.get()}"
-version = "${project.mod_version}+${getVersion()}"
+version = getVersion()
 group = project.maven_group
 
 repositories {
@@ -80,7 +80,7 @@ publishing {
 		mavenJava(MavenPublication) {
 			groupId project.maven_group
 			artifactId "${project.archives_base_name}"
-			version getVersion()
+			version "${project.mod_version}+${getVersion()}"
 			from components.java
 		}
 	}
@@ -102,11 +102,12 @@ loom {
 }
 
 String getVersion() {
+	def mod_version = project.mod_version
 	def build_id = System.getenv("GITHUB_RUN_NUMBER")
 
 	// CI builds only
 	if (build_id != null) {
-		return "build.${build_id}"
+		return "${mod_version}+build.${build_id}"
 	}
 
 	if (grgit != null) {
@@ -118,10 +119,10 @@ String getVersion() {
 			id += "-dirty"
 		}
 
-		return "rev.${id}"
+		return "${mod_version}+rev.${id}"
 	}
 
 	// No tracking information could be found about the build
-	return "unknown"
+	return "${mod_version}+unknown"
 
 }
