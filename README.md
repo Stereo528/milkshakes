@@ -1,4 +1,5 @@
 # Moue Milkshakes (For Quilt)
+[Modrinth Link](https://modrinth.com/mod/moue-milkshakes/)
 
 ---
 
