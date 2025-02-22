@@ -1,4 +1,4 @@
-package com.stereo528.moue_milkshakes.Mixin;
+package dev.stereo528.moue_milkshakes.Mixin;
 
 import net.minecraft.world.inventory.BrewingStandMenu;
 import net.minecraft.world.item.ItemStack;
@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.stereo528.moue_milkshakes.Util.Registar.SHAKE_MIX;
-import static com.stereo528.moue_milkshakes.Util.Registar.SHAKE_MIX_SHAKE_CUP;
+import static dev.stereo528.moue_milkshakes.Util.Registar.SHAKE_MIX;
+import static dev.stereo528.moue_milkshakes.Util.Registar.SHAKE_MIX_SHAKE_CUP;
 
 @Mixin(BrewingStandMenu.PotionSlot.class)
 public class BrewingStandMenuMixin {

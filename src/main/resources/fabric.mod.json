@@ -1,0 +1,33 @@
+{
+	"schema_version": 1,
+  "id": "moue_milkshakes",
+  "name": "Moue Milkshakes",
+  "version": "${version}",
+  "environment": "*",
+	"authors": [
+    "Stereo528"
+  ],
+  "contact": {
+    "homepage": "https://stereo528.com",
+    "issues": "https://github.com/Stereo528/milkshakes/issues",
+    "sources": "https://github.com/Stereo528/milkshakes"
+  },
+  "icon": "assets/moue_milkshakes/icon.png",
+  "entrypoints": {
+    "main": [
+      "dev.stereo528.moue_milkshakes.MoueMilkshakes"
+    ],
+    "client": [
+      "dev.stereo528.moue_milkshakes.MoueMilkshakesClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "fabric-api": ">=0.115.1",
+    "minecraft": ">=1.21.1"
+  },
+  "mixins": [
+    "moue_milkshakes.mixins.json"
+  ],
+  "description": "Moue (/mu/)\n a little grimace : pout\n---\nGrimace Shakes are/were the big thing. So I thought \"why the hell not.\", And now I can proudly present Moue Milkshakes!\nUsing state-of-the-art methods, you can now brew, *yes* brew, your milkshakes!\nUsing shake mix and some milk bottles (provided by Milk Lib) you can create Vanilla, Chocolate, or Strawberry shakes."
+}

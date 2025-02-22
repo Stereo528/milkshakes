@@ -1,6 +1,6 @@
-package com.stereo528.moue_milkshakes.Blocks;
+package dev.stereo528.moue_milkshakes.Blocks;
 
-import com.stereo528.moue_milkshakes.Util.Registar;
+import dev.stereo528.moue_milkshakes.Util.Registar;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;

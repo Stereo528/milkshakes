@@ -1,10 +1,7 @@
-package com.stereo528.moue_milkshakes.Mixin;
+package dev.stereo528.moue_milkshakes.Mixin;
 
-import io.github.tropheusj.milk.Milk;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionBrewing;
-import net.minecraft.world.item.crafting.Ingredient;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -13,10 +10,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.List;
 import java.util.function.Predicate;
 
-import static com.stereo528.moue_milkshakes.Util.Registar.*;
+import static dev.stereo528.moue_milkshakes.Util.Registar.*;
 
 @Mixin(PotionBrewing.class)
 public abstract class PotionBrewingMixin {

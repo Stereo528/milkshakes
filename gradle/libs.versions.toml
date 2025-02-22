@@ -1,36 +1,32 @@
 [versions]
 # The latest versions are available at https://lambdaurora.dev/tools/import_quilt.html
-minecraft = "1.20.1"
-quilt_loader = "0.19.2"
+minecraft = "1.21.1"
+fabric_loader = "0.16.10"
 
-quilted_fabric_api = "7.0.6+0.85.0-1.20.1"
+fabric_api = "0.115.1+1.21.1"
 
-sodium_version = "mc1.20-0.4.10"
-mod_menu_version = "7.1.0"
+sodium_version = "mc1.21.1-0.6.9-fabric"
+mod_menu_version = "11.0.3"
 joml_version = "1.10.5"
-midnightlib_version = "1.4.1-quilt"
-emi_version = "1.0.9+1.20.1"
-milk_lib_version = "1.2.60"
+midnightlib_version = "1.6.8+1.21.1-fabric"
+emi_version = "1.1.20+1.21.1"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
-quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loader" }
+fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
 
-quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
-quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
+fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
 
 sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
 joml = { module = "org.joml:joml", version.ref = "joml_version" }
 mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_version" }
 midnightlib = { module = "maven.modrinth:midnightlib", version.ref = "midnightlib_version"}
 emi = { module = "dev.emi:emi-fabric", version.ref = "emi_version"}
-milk_lib = {module = "io.github.tropheusj:milk-lib", version.ref = "milk_lib_version"}
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]
-quilted_fabric_api = ["quilted_fabric_api", "quilted_fabric_api_deprecated"]
 dev_mods = [ "joml", "sodium", "emi" ]
-dependencies = [ "quilt_loader", "midnightlib", "quilted_fabric_api", "mod_menu", "milk_lib" ]
+dependencies = [ "fabric_loader", "midnightlib", "fabric_api", "mod_menu"]
 
 [plugins]
-quilt_loom = { id = "org.quiltmc.loom", version = "1.2.+" }
+loom = { id = "fabric-loom", version = "1.10-SNAPSHOT" }
