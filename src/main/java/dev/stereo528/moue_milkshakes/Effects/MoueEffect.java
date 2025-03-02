@@ -18,15 +18,18 @@ public class MoueEffect extends MobEffect {
 	public static class GrimaceFogFunction implements FogRenderer.MobEffectFogFunction {
 		@Override
 		public Holder<MobEffect> getMobEffect() {
-			return (Holder<MobEffect>) MOUE_EFFECT;
+			return MOUE_EFFECT;
 		}
 
 		@Override
 		public void setupFog(FogRenderer.FogData fogData, LivingEntity livingEntity, MobEffectInstance mobEffectInstance, float f, float g) {
-
-			float h = mobEffectInstance.isInfiniteDuration() ? 15.0F : Mth.lerp(Math.min(1.0F, (float) mobEffectInstance.getDuration() / 20.0F), f, 15.0F);
-			fogData.start = 0.0f;
+			float h = Mth.lerp(mobEffectInstance.getBlendFactor(livingEntity, g), f, 15.0F);
+			fogData.start = fogData.mode == FogRenderer.FogMode.FOG_SKY ? 0.0F : h * 0.75F;
 			fogData.end = h;
+		}
+
+		public float getModifiedVoidDarkness(LivingEntity livingEntity, MobEffectInstance mobEffectInstance, float f, float g) {
+			return 1.0F - mobEffectInstance.getBlendFactor(livingEntity, g);
 		}
 	}
 }

@@ -17,6 +17,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ColoredFallingBlock;
@@ -31,11 +32,11 @@ import static net.minecraft.world.level.block.Blocks.SAND;
 public class Registar {
 
 
-	public static MobEffect MOUE_EFFECT = new MoueEffect(MobEffectCategory.HARMFUL, 0x543e62);
+	public static Holder<MobEffect> MOUE_EFFECT = registerMobEffect("moue", new MoueEffect(MobEffectCategory.HARMFUL, 0x543e62));
 
 	public static final Item MOUE_SHAKE = registerItem("moue_shake", new Item(new Item.Properties()
 		.stacksTo(1).food(new FoodProperties.Builder().nutrition(2).saturationModifier(1).alwaysEdible()
-			.effect(new MobEffectInstance((Holder<MobEffect>) MOUE_EFFECT, 100, 0), 1.0F).build()
+			.effect(new MobEffectInstance(MOUE_EFFECT, 100, 0), 1.0F).build()
 	)));
 
 	public static final Item VANILLA_SHAKE = registerItem("vanilla_shake", new Item(new Item.Properties()
@@ -112,6 +113,10 @@ public class Registar {
 
 	public static Block registerBlockNoItem(String name, Block block) {
 		return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(MODID, name), block);
+	}
+
+	public static Holder<MobEffect> registerMobEffect(String name, MobEffect mobEffect) {
+		return Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, ResourceLocation.tryBuild(MODID, name), mobEffect);
 	}
 }
 

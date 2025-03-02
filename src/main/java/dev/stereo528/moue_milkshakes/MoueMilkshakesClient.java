@@ -12,7 +12,7 @@ public class MoueMilkshakesClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 
-		FogRenderer.MOB_EFFECT_FOG.add(new GrimaceFogFunction());
+		//FogRenderer.MOB_EFFECT_FOG.add(new GrimaceFogFunction());
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), Registar.STRAWBERRY_CROP);
 	}
 }
