@@ -1,19 +1,26 @@
 package dev.stereo528.moue_milkshakes.Util;
 
+import dev.stereo528.moue_milkshakes.Blocks.MixerBlock;
+import dev.stereo528.moue_milkshakes.Blocks.MixerBlockEntity;
 import dev.stereo528.moue_milkshakes.Blocks.StrawberryCropBlock;
 import dev.stereo528.moue_milkshakes.Effects.MoueEffect;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ColorRGBA;
+import net.minecraft.util.datafix.fixes.References;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -22,6 +29,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ColoredFallingBlock;
 import net.minecraft.world.level.block.FallingBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 
@@ -94,8 +102,11 @@ public class Registar {
 
 	public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds", new ItemNameBlockItem(STRAWBERRY_CROP, new Item.Properties()));
 
+	public static final Block MIXER = registerBlock("mixer", new MixerBlock(BlockBehaviour.Properties.of().strength(1.0f)));
 
+	public static final BlockEntityType<MixerBlockEntity> MIXERBET = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, "mixer", BlockEntityType.Builder.of(MixerBlockEntity::new, MIXER).build(Util.fetchChoiceType(References.BLOCK_ENTITY, "mixer")));
 
+	public static final MenuType<MixerMenu> MIXER_MENU_TYPE = Registry.register(BuiltInRegistries.MENU, ResourceLocation.tryBuild(MODID, "mixer"), new MenuType(MixerMenu::new, FeatureFlags.VANILLA_SET));
 
 	public static void init() {
 	}
