@@ -15,10 +15,12 @@ public class MixerMenu extends AbstractContainerMenu {
 
     public MixerMenu(@Nullable MenuType<?> menuType, int i, Inventory inventory, Container container) {
         super(menuType, i);
-        checkContainerSize(container, 2);
+        checkContainerSize(container, 4);
         this.container = container;
-        this.addSlot(new Slot(container, 0, 0, 0));
-        this.addSlot(new Slot(container, 1, 23, 0));
+        this.addSlot(new Slot(container, 0, 16, 16)); //milk bucket
+        this.addSlot(new Slot(container, 1, 64, 16)); //cup
+        this.addSlot(new Slot(container, 2, 64, 48)); // ingredient
+        this.addSlot(new Slot(container, 3, 112, 32)); //result
 
         for(int j = 0; j < 3; ++j) {
             for(int k = 0; k < 9; ++k) {
@@ -32,7 +34,7 @@ public class MixerMenu extends AbstractContainerMenu {
     }
 
     public MixerMenu(int i, Inventory inventory) {
-        this(Registar.MIXER_MENU_TYPE, i, inventory, new SimpleContainer(2));
+        this(Registar.MIXER_MENU_TYPE, i, inventory, new SimpleContainer(4));
     }
 
     @Override

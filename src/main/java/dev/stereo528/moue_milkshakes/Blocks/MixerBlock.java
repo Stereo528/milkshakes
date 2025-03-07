@@ -1,7 +1,6 @@
 package dev.stereo528.moue_milkshakes.Blocks;
 
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.stereo528.moue_milkshakes.Util.Registar;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

@@ -21,7 +21,7 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
 
     public MixerBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(Registar.MIXERBET, blockPos, blockState);
-        this.items = NonNullList.withSize(2, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(4, ItemStack.EMPTY);
     }
 
     @Override

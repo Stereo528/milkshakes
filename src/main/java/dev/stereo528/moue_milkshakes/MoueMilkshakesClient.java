@@ -1,6 +1,5 @@
 package dev.stereo528.moue_milkshakes;
 
-//import dev.stereo528.moue_milkshakes.Effects.MoueEffect.*;
 import dev.stereo528.moue_milkshakes.Util.MixerScreen;
 import dev.stereo528.moue_milkshakes.Util.Registar;
 import net.fabricmc.api.ClientModInitializer;
@@ -13,7 +12,6 @@ public class MoueMilkshakesClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 
-		//FogRenderer.MOB_EFFECT_FOG.add(new GrimaceFogFunction());
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), Registar.STRAWBERRY_CROP);
 		MenuScreens.register(Registar.MIXER_MENU_TYPE, MixerScreen::new);
 	}
