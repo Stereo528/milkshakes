@@ -17,8 +17,7 @@ import net.minecraft.world.item.alchemy.PotionBrewing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static dev.stereo528.moue_milkshakes.Util.Registar.SHAKE_MIX_SHAKE_CUP;
-import static dev.stereo528.moue_milkshakes.Util.Registar.VANILLA_SHAKE;
+import static dev.stereo528.moue_milkshakes.Util.Registar.*;
 import static net.minecraft.world.item.Items.*;
 
 public class MoueMilkshakes implements ModInitializer {
@@ -27,7 +26,7 @@ public class MoueMilkshakes implements ModInitializer {
 
 	public static final ResourceKey<CreativeModeTab> ITEM_GROUP = ResourceKey.create(Registries.CREATIVE_MODE_TAB,  ResourceLocation.tryBuild(MODID, "milkshakes.tab"));
 	public static final CreativeModeTab MILKSHAKES = FabricItemGroup.builder()
-		.icon(() -> new ItemStack(DIAMOND))
+		.icon(() -> new ItemStack(MOUE_SHAKE))
 		.title(Component.translatable("itemGroup.moue_milkshakes.milkshakes_tab"))
 		.build();
 

@@ -19,7 +19,7 @@ public class MixerMenu extends AbstractContainerMenu {
         this.container = container;
         this.addSlot(new Slot(container, 0, 16, 16)); //milk bucket
         this.addSlot(new Slot(container, 1, 64, 16)); //cup
-        this.addSlot(new Slot(container, 2, 64, 48)); // ingredient
+        this.addSlot(new Slot(container, 2, 64, 48)); //ingredient
         this.addSlot(new Slot(container, 3, 112, 32)); //result
 
         for(int j = 0; j < 3; ++j) {
@@ -39,8 +39,10 @@ public class MixerMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int i) {
-        return null;
+        return ItemStack.EMPTY;
     }
+
+
 
     @Override
     public boolean stillValid(Player player) {

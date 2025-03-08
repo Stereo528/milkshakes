@@ -4,8 +4,11 @@ import dev.stereo528.moue_milkshakes.Util.MixerMenu;
 import dev.stereo528.moue_milkshakes.Util.Registar;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -45,6 +48,18 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
     }
 
     @Override
+    protected void loadAdditional(CompoundTag compoundTag, HolderLookup.Provider provider) {
+        super.loadAdditional(compoundTag, provider);
+        ContainerHelper.loadAllItems(compoundTag, this.items, provider);
+    }
+
+    @Override
+    protected void saveAdditional(CompoundTag compoundTag, HolderLookup.Provider provider) {
+        super.saveAdditional(compoundTag, provider);
+        ContainerHelper.saveAllItems(compoundTag, this.items, provider);
+    }
+
+    @Override
     public int[] getSlotsForFace(Direction direction) {
         return new int[0];
     }
@@ -64,7 +79,11 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
         return this.items.size();
     }
 
+
+
     public static void serverTick(Level level, BlockPos blockPos, BlockState blockState, MixerBlockEntity mixerBlockEntity) {
 
     }
+
+
 }
