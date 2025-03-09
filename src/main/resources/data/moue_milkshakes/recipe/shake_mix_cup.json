@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "moue_milkshakes:empty_cup"
+    },
+    {
+      "item": "moue_milkshakes:shake_mix"
+    }
+  ],
+  "result": {
+    "id": "moue_milkshakes:shake_mix_cup",
+    "count": 1
+  }
+}

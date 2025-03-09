@@ -76,7 +76,9 @@ public class Registar {
 			.effect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 2), 1.0F).alwaysEdible().build()
 		)));
 
-	public static final Item SHAKE_MIX_SHAKE_CUP = registerItem("partially_filled_shake_cup", new Item(new Item.Properties().stacksTo(1)));
+	public static final Item SHAKE_MIX_SHAKE_CUP = registerItem("shake_mix_cup", new Item(new Item.Properties().stacksTo(4)));
+
+	public static final Item EMPTY_CUP = registerItem("empty_cup", new Item(new Item.Properties()));
 
 	public static final Item SHAKE_MIX = registerItem("shake_mix", new Item(new Item.Properties()));
 

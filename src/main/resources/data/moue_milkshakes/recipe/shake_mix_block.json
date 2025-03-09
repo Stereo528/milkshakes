@@ -8,10 +8,10 @@
   ],
   "key": {
     "s": {
-      "item": "minecraft:sugar"
+      "item": "moue_milkshakes:shake_mix"
     }
   },
   "result": {
-    "item": "moue_milkshakes:sugar_block"
+    "id": "moue_milkshakes:shake_mix_block"
   }
 }

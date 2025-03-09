@@ -3,11 +3,11 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "moue_milkshakes:sugar_block"
+      "item": "moue_milkshakes:shake_mix_block"
     }
   ],
   "result": {
-    "item": "minecraft:sugar",
+    "id": "moue_milkshakes:shake_mix",
     "count": 9
   }
 }

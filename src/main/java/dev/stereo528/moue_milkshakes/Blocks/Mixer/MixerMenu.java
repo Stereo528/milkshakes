@@ -7,9 +7,7 @@ import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
@@ -20,7 +18,7 @@ import static net.minecraft.world.item.Items.MILK_BUCKET;
 public class MixerMenu extends AbstractContainerMenu {
     private final Container container;
 
-    public MixerMenu(@Nullable MenuType<?> menuType, int i, Inventory inventory, Container container) {
+    public MixerMenu(@Nullable MenuType<?> menuType, int i, Inventory inventory, Container container, ContainerData containerData) {
         super(menuType, i);
         checkContainerSize(container, 4);
         this.container = container;
@@ -28,6 +26,8 @@ public class MixerMenu extends AbstractContainerMenu {
         this.addSlot(new Slot(container, 1, 64, 16)); //cup
         this.addSlot(new Slot(container, 2, 64, 48)); //ingredient
         this.addSlot(new MixerResultSlot(container, 3, 112, 32)); //result
+
+        this.addDataSlots(containerData);
 
         for(int j = 0; j < 3; ++j) {
             for(int k = 0; k < 9; ++k) {
@@ -41,7 +41,7 @@ public class MixerMenu extends AbstractContainerMenu {
     }
 
     public MixerMenu(int i, Inventory inventory) {
-        this(Registar.MIXER_MENU_TYPE, i, inventory, new SimpleContainer(4));
+        this(Registar.MIXER_MENU_TYPE, i, inventory, new SimpleContainer(4), new SimpleContainerData(2));
     }
 
     @Override

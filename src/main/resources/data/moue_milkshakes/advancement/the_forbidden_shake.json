@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "moue_milkshakes:moue_shake"
+      "id": "moue_milkshakes:moue_shake"
     },
     "title": "The Forbidden Shake",
     "description": "You have created and consumed the Forbidden Shake, how could you...",
