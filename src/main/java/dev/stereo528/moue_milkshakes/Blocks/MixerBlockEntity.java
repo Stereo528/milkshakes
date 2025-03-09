@@ -1,6 +1,6 @@
 package dev.stereo528.moue_milkshakes.Blocks;
 
-import dev.stereo528.moue_milkshakes.Util.MixerMenu;
+import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerMenu;
 import dev.stereo528.moue_milkshakes.Util.Registar;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

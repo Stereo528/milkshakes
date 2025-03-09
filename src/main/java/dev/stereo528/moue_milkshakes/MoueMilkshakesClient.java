@@ -1,6 +1,6 @@
 package dev.stereo528.moue_milkshakes;
 
-import dev.stereo528.moue_milkshakes.Util.MixerScreen;
+import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerScreen;
 import dev.stereo528.moue_milkshakes.Util.Registar;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;

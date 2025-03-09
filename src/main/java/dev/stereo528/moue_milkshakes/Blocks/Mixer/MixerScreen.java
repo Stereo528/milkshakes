@@ -1,4 +1,4 @@
-package dev.stereo528.moue_milkshakes.Util;
+package dev.stereo528.moue_milkshakes.Blocks.Mixer;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;

@@ -1,10 +1,10 @@
 package dev.stereo528.moue_milkshakes.Util;
 
+import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerMenu;
 import dev.stereo528.moue_milkshakes.Blocks.MixerBlock;
 import dev.stereo528.moue_milkshakes.Blocks.MixerBlockEntity;
 import dev.stereo528.moue_milkshakes.Blocks.StrawberryCropBlock;
 import dev.stereo528.moue_milkshakes.Effects.MoueEffect;
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
@@ -19,16 +19,13 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ColoredFallingBlock;
-import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 

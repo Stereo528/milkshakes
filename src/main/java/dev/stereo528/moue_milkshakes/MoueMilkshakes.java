@@ -2,6 +2,7 @@ package dev.stereo528.moue_milkshakes;
 
 //import io.github.tropheusj.milk.Milk; //disabled till milk lib update
 import dev.stereo528.moue_milkshakes.Effects.MoueEffect;
+import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerMixing;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.client.renderer.FogRenderer;
@@ -11,14 +12,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.alchemy.PotionBrewing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static dev.stereo528.moue_milkshakes.Util.Registar.*;
-import static net.minecraft.world.item.Items.*;
 
 public class MoueMilkshakes implements ModInitializer {
 	public static final String MODID = "moue_milkshakes";
@@ -34,5 +32,6 @@ public class MoueMilkshakes implements ModInitializer {
 	public void onInitialize() {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, MILKSHAKES);
 		FogRenderer.MOB_EFFECT_FOG.add(new MoueEffect.GrimaceFogFunction());
+		MixerMixing.init();
 	}
 }
