@@ -20,6 +20,8 @@
   "item.moue_milkshakes.strawberry_seeds": "Strawberry Seeds",
   "item.moue_milkshakes.sugared_strawberry": "Sugared Strawberry",
   "block.moue_milkshakes.strawberry_crop": "Strawberry Crop",
+  "block.moue_milkshakes.mixer": "Mixer",
+  "moue_milkshakes.mixer": "Mixer",
 
 
   "architecture_extensions.grouped_block.moue_milkshakes.shake_mix_block": "Shake Mix",

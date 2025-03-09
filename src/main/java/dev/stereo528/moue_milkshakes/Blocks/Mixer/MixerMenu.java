@@ -17,15 +17,17 @@ import static net.minecraft.world.item.Items.MILK_BUCKET;
 
 public class MixerMenu extends AbstractContainerMenu {
     private final Container container;
+    private final ContainerData containerData;
 
     public MixerMenu(@Nullable MenuType<?> menuType, int i, Inventory inventory, Container container, ContainerData containerData) {
         super(menuType, i);
         checkContainerSize(container, 4);
         this.container = container;
-        this.addSlot(new MixerMilkSlot(container, 0, 16, 16)); //milk bucket
-        this.addSlot(new Slot(container, 1, 64, 16)); //cup
-        this.addSlot(new Slot(container, 2, 64, 48)); //ingredient
-        this.addSlot(new MixerResultSlot(container, 3, 112, 32)); //result
+        this.containerData = containerData;
+        this.addSlot(new MixerMilkSlot(container, 0, 32, 16)); //milk bucket
+        this.addSlot(new Slot(container, 1, 80, 16)); //cup
+        this.addSlot(new Slot(container, 2, 80, 48)); //ingredient
+        this.addSlot(new MixerResultSlot(container, 3, 128, 32)); //result
 
         this.addDataSlots(containerData);
 
@@ -93,6 +95,14 @@ public class MixerMenu extends AbstractContainerMenu {
             slot.onTake(player, itemStack);
         }
         return itemStackCopy;
+    }
+
+    public int getFuel() {
+        return this.containerData.get(0);
+    }
+
+    public int getMixtime() {
+        return this.containerData.get(1);
     }
 
     @Override

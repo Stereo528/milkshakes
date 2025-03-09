@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "moue_milkshakes:block/mixer_side",
+    "down": "moue_milkshakes:block/mixer_bottom",
+    "up": "moue_milkshakes:block/mixer_top",
+    "north": "moue_milkshakes:block/mixer_side",
+    "east": "moue_milkshakes:block/mixer_side",
+    "south": "moue_milkshakes:block/mixer_side",
+    "west": "moue_milkshakes:block/mixer_side"
+  }
+}

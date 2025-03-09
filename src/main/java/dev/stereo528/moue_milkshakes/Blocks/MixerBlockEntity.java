@@ -2,7 +2,6 @@ package dev.stereo528.moue_milkshakes.Blocks;
 
 import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerMenu;
 import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerMixing;
-import dev.stereo528.moue_milkshakes.MoueMilkshakes;
 import dev.stereo528.moue_milkshakes.Util.Registar;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -134,7 +133,6 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
             mixerBlockEntity.fuel = MAX_FUEL;
             mixerBlockEntity.setItem(0, BUCKET.getDefaultInstance());
             setChanged(level, blockPos, blockState);
-            MoueMilkshakes.LOGGER.info("Refueled");
         }
         boolean mixable = isMixable(mixerBlockEntity.items);
         boolean mixTimeLeft = mixerBlockEntity.mixTime > 0;
@@ -157,7 +155,7 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
     }
 
     private static void makeShake(ItemStack itemStack, MixerBlockEntity mixerBlockEntity) {
-        mixerBlockEntity.items.set(1, ItemStack.EMPTY);
+        mixerBlockEntity.items.get(1).shrink(1);
         mixerBlockEntity.items.set(3, MixerMixing.makeShake(itemStack));
     }
 
@@ -174,6 +172,10 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
             return !cup.isEmpty();
         }
         return false;
+    }
+
+    public static int getMaxFuel() {
+        return MAX_FUEL;
     }
 
 

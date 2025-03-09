@@ -45,7 +45,7 @@ public class MoueMilkshakes implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, MILKSHAKES);
-		FogRenderer.MOB_EFFECT_FOG.add(new MoueEffect.GrimaceFogFunction());
+
 		MixerMixing.init();
 
 		LootTableEvents.MODIFY.register(((resourceKey, builder, lootTableSource, provider) -> {
