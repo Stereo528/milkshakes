@@ -9,6 +9,7 @@ joml = "1.10.6"  # Needed for Sodium
 modmenu = "11.0.3"
 emi_version = "1.1.20+1.21.1"
 
+
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }

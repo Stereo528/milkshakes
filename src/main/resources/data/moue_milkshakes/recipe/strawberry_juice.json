@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "misc",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "sugar"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "moue_milkshakes:strawberry"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "id": "moue_milkshakes:strawberry_juice",
+    "count": 1
+  }
+}

@@ -19,6 +19,9 @@
     ],
     "client": [
       "dev.stereo528.moue_milkshakes.MoueMilkshakesClient"
+    ],
+    "emi": [
+      "dev.stereo528.moue_milkshakes.EMI.EmiEntry"
     ]
   },
   "depends": {

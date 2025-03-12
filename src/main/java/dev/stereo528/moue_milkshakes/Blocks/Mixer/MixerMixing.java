@@ -28,6 +28,7 @@ public class MixerMixing {
         addRecipe(CARROT, CARROT_SMOOTHIE);
         addRecipe(GOLDEN_CARROT, GOLDEN_CARROT_SMOOTHIE);
         addRecipe(NETHER_STAR, NETHER_STAR_SHAKE);
+        addRecipe(EMERALD, SHAMROCK_SHAKE);
     }
 
     public static void addIngredient(ItemStack itemStack) {
@@ -42,6 +43,10 @@ public class MixerMixing {
 
     public static List<ItemStack> getIngredients() {
         return ingredients;
+    }
+
+    public static List<ItemStack> getResults() {
+        return results;
     }
 
     public static List<Item[]> getRecipes() {

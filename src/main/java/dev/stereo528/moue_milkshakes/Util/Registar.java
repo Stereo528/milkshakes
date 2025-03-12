@@ -75,6 +75,9 @@ public class Registar {
 			.effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 2100, 0), 1.0F)
 			.effect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 2), 1.0F).alwaysEdible().build()
 		)));
+	public static final Item SHAMROCK_SHAKE = registerItem("shamrock_shake", new Item(new Item.Properties()
+		.stacksTo(1).food(new FoodProperties.Builder().nutrition(3).saturationModifier(2).build()
+			)));
 
 	public static final Item SHAKE_MIX_SHAKE_CUP = registerItem("shake_mix_cup", new Item(new Item.Properties().stacksTo(4)));
 

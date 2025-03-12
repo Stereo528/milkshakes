@@ -31,6 +31,7 @@ dependencies {
 
     modImplementation libs.bundles.dependencies
     modLocalRuntime libs.bundles.dev
+    modCompileOnly "dev.emi:emi-fabric:${libs.versions.emi.getVersion().get()}:api"
 }
 
 processResources {
