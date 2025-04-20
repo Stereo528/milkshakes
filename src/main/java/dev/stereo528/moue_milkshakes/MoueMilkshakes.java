@@ -48,16 +48,16 @@ public class MoueMilkshakes implements ModInitializer {
 
 		MixerMixing.init();
 
-		LootTableEvents.MODIFY.register(((resourceKey, builder, lootTableSource, provider) -> {
-			if (lootTableSource.isBuiltin() && Blocks.SHORT_GRASS.getLootTable().equals(resourceKey)) {
-				LootPool.Builder pool = LootPool.lootPool()
-						.setRolls(ConstantValue.exactly(1))
-						.conditionally(LootItemRandomChanceCondition.randomChance(0.125f).build())
-						.with(LootItem.lootTableItem(STRAWBERRY_SEEDS).build())
-						.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)));
+		// LootTableEvents.MODIFY.register(((resourceKey, builder, lootTableSource, provider) -> {
+		// 	if (lootTableSource.isBuiltin() && Blocks.SHORT_GRASS.getLootTable().equals(resourceKey)) {
+		// 		LootPool.Builder pool = LootPool.lootPool()
+		// 				.setRolls(ConstantValue.exactly(1))
+		// 				.conditionally(LootItemRandomChanceCondition.randomChance(0.125f).build())
+		// 				.with(LootItem.lootTableItem(STRAWBERRY_SEEDS).build())
+		// 				.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)));
 
-				builder.pool(pool.build());
-			}
-		}));
+		// 		builder.pool(pool.build());
+		// 	}
+		// })); //removed for blanketcon
 	}
 }
