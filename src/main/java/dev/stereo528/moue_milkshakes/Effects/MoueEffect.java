@@ -8,7 +8,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 
-import static dev.stereo528.moue_milkshakes.Util.Registar.MOUE_EFFECT;
+import static dev.stereo528.moue_milkshakes.Util.Registrar.MOUE_EFFECT;
 
 public class MoueEffect extends MobEffect {
 	public MoueEffect(MobEffectCategory mobEffectCategory, int color) {

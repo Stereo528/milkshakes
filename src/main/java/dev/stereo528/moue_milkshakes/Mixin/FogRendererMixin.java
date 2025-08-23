@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static dev.stereo528.moue_milkshakes.Util.Registar.MOUE_EFFECT;
+import static dev.stereo528.moue_milkshakes.Util.Registrar.MOUE_EFFECT;
 
 @Environment(EnvType.CLIENT)
 @Mixin(FogRenderer.class)

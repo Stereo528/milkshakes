@@ -1,8 +1,8 @@
 [versions]
 # Latest Versions can be found at https://fabricmc.net/develop/
 minecraft = "1.21.1"
-fabric_loader = "0.16.10"
-fapi = "0.115.1+1.21.1"
+fabric_loader = "0.17.2"
+fapi = "0.116.5+1.21.1"
 
 sodium = "mc1.21.1-0.6.9-fabric"
 joml = "1.10.6"  # Needed for Sodium

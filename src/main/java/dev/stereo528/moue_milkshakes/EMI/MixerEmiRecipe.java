@@ -63,8 +63,8 @@ public class MixerEmiRecipe implements EmiRecipe {
         return 52;
     }
 
-   @Override
-   public boolean supportsRecipeTree() {
+    @Override
+    public boolean supportsRecipeTree() {
         return false;
    }
 

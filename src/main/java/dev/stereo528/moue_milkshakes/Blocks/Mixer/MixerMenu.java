@@ -2,7 +2,7 @@ package dev.stereo528.moue_milkshakes.Blocks.Mixer;
 
 import dev.stereo528.moue_milkshakes.Blocks.Mixer.Slots.MixerMilkSlot;
 import dev.stereo528.moue_milkshakes.Blocks.Mixer.Slots.MixerResultSlot;
-import dev.stereo528.moue_milkshakes.Util.Registar;
+import dev.stereo528.moue_milkshakes.Util.Registrar;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -43,7 +43,7 @@ public class MixerMenu extends AbstractContainerMenu {
     }
 
     public MixerMenu(int i, Inventory inventory) {
-        this(Registar.MIXER_MENU_TYPE, i, inventory, new SimpleContainer(4), new SimpleContainerData(2));
+        this(Registrar.MIXER_MENU_TYPE, i, inventory, new SimpleContainer(4), new SimpleContainerData(2));
     }
 
     @Override
@@ -70,7 +70,7 @@ public class MixerMenu extends AbstractContainerMenu {
                         return ItemStack.EMPTY;
                     }
                 }
-                if (itemStack.is(Registar.SHAKE_MIX_SHAKE_CUP)) {
+                if (itemStack.is(Registrar.SHAKE_MIX_SHAKE_CUP)) {
                     if (!this.moveItemStackTo(itemStack, cupSlot, cupSlot + 1, false)) {
                         return ItemStack.EMPTY;
                     }

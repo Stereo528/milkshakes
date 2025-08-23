@@ -2,7 +2,7 @@ package dev.stereo528.moue_milkshakes.Blocks;
 
 import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerMenu;
 import dev.stereo528.moue_milkshakes.Blocks.Mixer.MixerMixing;
-import dev.stereo528.moue_milkshakes.Util.Registar;
+import dev.stereo528.moue_milkshakes.Util.Registrar;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -38,7 +38,7 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
     private Item currentIngredient;
 
     public MixerBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(Registar.MIXERBET, blockPos, blockState);
+        super(Registrar.MIXERBET, blockPos, blockState);
         this.items = NonNullList.withSize(4, ItemStack.EMPTY);
         this.fuelData = new ContainerData() {
             @Override
@@ -84,7 +84,7 @@ public class MixerBlockEntity extends BaseContainerBlockEntity implements Worldl
 
     @Override
     protected @NotNull AbstractContainerMenu createMenu(int i, Inventory inventory) {
-        return new MixerMenu(Registar.MIXER_MENU_TYPE, i, inventory, this, this.fuelData);
+        return new MixerMenu(Registrar.MIXER_MENU_TYPE, i, inventory, this, this.fuelData);
     }
 
     @Override

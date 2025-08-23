@@ -1,7 +1,7 @@
 package dev.stereo528.moue_milkshakes.Blocks;
 
 import com.mojang.serialization.MapCodec;
-import dev.stereo528.moue_milkshakes.Util.Registar;
+import dev.stereo528.moue_milkshakes.Util.Registrar;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Containers;
@@ -42,7 +42,7 @@ public class MixerBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState, BlockEntityType<T> blockEntityType) {
-        return createBlockEntityTicker(level, blockEntityType, Registar.MIXERBET);
+        return createBlockEntityTicker(level, blockEntityType, Registrar.MIXERBET);
     }
 
     @Nullable

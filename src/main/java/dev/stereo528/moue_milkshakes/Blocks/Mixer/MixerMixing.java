@@ -1,14 +1,12 @@
 package dev.stereo528.moue_milkshakes.Blocks.Mixer;
 
-import dev.stereo528.moue_milkshakes.MoueMilkshakes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static dev.stereo528.moue_milkshakes.Util.Registar.*;
+import static dev.stereo528.moue_milkshakes.Util.Registrar.*;
 import static net.minecraft.world.item.Items.*;
 
 public class MixerMixing {
@@ -29,6 +27,7 @@ public class MixerMixing {
         addRecipe(GOLDEN_CARROT, GOLDEN_CARROT_SMOOTHIE);
         addRecipe(NETHER_STAR, NETHER_STAR_SHAKE);
         addRecipe(EMERALD, SHAMROCK_SHAKE);
+        addRecipe(LIGHT_BLUE_WOOL, WONDERLAND_SHAKE);
     }
 
     public static void addIngredient(ItemStack itemStack) {

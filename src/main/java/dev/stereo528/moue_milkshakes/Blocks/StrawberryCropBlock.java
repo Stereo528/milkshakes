@@ -1,6 +1,6 @@
 package dev.stereo528.moue_milkshakes.Blocks;
 
-import dev.stereo528.moue_milkshakes.Util.Registar;
+import dev.stereo528.moue_milkshakes.Util.Registrar;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -18,7 +18,7 @@ public class StrawberryCropBlock extends CropBlock {
 
 	@Override
 	protected ItemLike getBaseSeedId() {
-		return Registar.STRAWBERRY_SEEDS;
+		return Registrar.STRAWBERRY_SEEDS;
 	}
 
 	@Override
