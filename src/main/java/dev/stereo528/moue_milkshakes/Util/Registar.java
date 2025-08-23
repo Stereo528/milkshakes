@@ -87,17 +87,17 @@ public class Registar {
 
 	public static final Block SHAKE_MIX_BLOCK = registerBlock("shake_mix_block", new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.ofFullCopy(SAND)));
 
-	public static final Block SPEED_BLOCK = registerBlock("sugar_block", new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.ofFullCopy(SAND)));
+	public static final Block SUGAR_BLOCK = registerBlock("sugar_block", new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.ofFullCopy(SAND)));
 
 	public static final Block SHAKE_MIX_BLOCK_NO_GRAVITY = registerBlock("shake_mix_block_no_gravity", new Block(BlockBehaviour.Properties.ofFullCopy(SAND)));
 
-	public static final Block SPEED_BLOCK_NO_GRAVITY = registerBlock("sugar_block_no_gravity", new Block(BlockBehaviour.Properties.ofFullCopy(SAND)));
+	public static final Block SUGAR_BLOCK_NO_GRAVITY = registerBlock("sugar_block_no_gravity", new Block(BlockBehaviour.Properties.ofFullCopy(SAND)));
 
 	public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Properties().food(new
 		FoodProperties.Builder().nutrition(1).saturationModifier(1).build()
 	)));
 	public static final Item SUGAR_STRAWBERRY = registerItem("sugared_strawberry", new Item(new Item.Properties().food(new
-		FoodProperties.Builder().nutrition(2).saturationModifier(1).build()
+        FoodProperties.Builder().nutrition(2).saturationModifier(1).build()
 	)));
 
 	public static final Block STRAWBERRY_CROP = registerBlockNoItem("strawberry_crop", new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
@@ -108,7 +108,7 @@ public class Registar {
 
 	public static final BlockEntityType<MixerBlockEntity> MIXERBET = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, "mixer", BlockEntityType.Builder.of(MixerBlockEntity::new, MIXER).build(Util.fetchChoiceType(References.BLOCK_ENTITY, "mixer")));
 
-	public static final MenuType<MixerMenu> MIXER_MENU_TYPE = Registry.register(BuiltInRegistries.MENU, ResourceLocation.tryBuild(MODID, "mixer"), new MenuType(MixerMenu::new, FeatureFlags.VANILLA_SET));
+	public static final MenuType<MixerMenu> MIXER_MENU_TYPE = Registry.register(BuiltInRegistries.MENU, ResourceLocation.tryBuild(MODID, "mixer"), new MenuType<>(MixerMenu::new, FeatureFlags.VANILLA_SET));
 
 	public static void init() {
 	}

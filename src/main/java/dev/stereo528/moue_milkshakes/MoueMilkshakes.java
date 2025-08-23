@@ -16,6 +16,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
@@ -45,14 +46,16 @@ public class MoueMilkshakes implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, MILKSHAKES);
+        ComposterBlock.COMPOSTABLES.put(STRAWBERRY.asItem(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(STRAWBERRY_SEEDS.asItem(), 0.3f);
 
-		MixerMixing.init();
+        MixerMixing.init();
 
 		LootTableEvents.MODIFY.register(((resourceKey, builder, lootTableSource, provider) -> {
 			if (lootTableSource.isBuiltin() && Blocks.SHORT_GRASS.getLootTable().equals(resourceKey)) {
 				LootPool.Builder pool = LootPool.lootPool()
 						.setRolls(ConstantValue.exactly(1))
-						.conditionally(LootItemRandomChanceCondition.randomChance(0.125f).build())
+						.conditionally(LootItemRandomChanceCondition.randomChance(0.0625f).build())
 						.with(LootItem.lootTableItem(STRAWBERRY_SEEDS).build())
 						.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)));
 
